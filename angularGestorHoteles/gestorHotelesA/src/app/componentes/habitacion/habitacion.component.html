@@ -1,0 +1,64 @@
+<br/>
+<div class="container-sm">
+    <div class="row">
+        <div class="col-6">
+            <h1 style="text-align:center"> Datos de la Habitacion</h1>
+            <form class="container-md">
+                <div class="mb-3">
+                    <label for="exampleNumeroHabitacion" class="form-label" style="font-size: 160%;">Numero Habitacion</label>
+
+                    <input type="numeroHabitacion" class="form-control" id="exampleNumeroHabitacion" name="numeroHabitacion" #numeroHabitacion="ngModel" [(ngModel)]="habitacionModel.numeroHabitacion" disabled>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleClase" class="form-label" style="font-size: 160%;">Clase</label>
+                    <input type="clase" class="form-control" id="exampleClase" name="clase" #clase="ngModel" [(ngModel)]="habitacionModel.clase" disabled>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleTamano" class="form-label" style="font-size: 160%;">Tamaño</label>
+                    <input type="tamano" class="form-control" id="exampleTamano" name="tamano" #tamano="ngModel" [(ngModel)]="habitacionModel.tamano" disabled>
+                </div>
+                <div class="mb-3">
+                    <label for="examplePrecio" class="form-label" style="font-size: 160%;">Precio</label>
+                    <input type="precio" class="form-control" id="exampleInputPrecio" name="precio" #precio="ngModel" [(ngModel)]="habitacionModel.precio" disabled>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleDisponible" class="form-label" style="font-size: 160%;">Diponible</label>
+                    <input type="disponible" class="form-control" id="exampleDisponible" name="disponible" #disponible="ngModel" [(ngModel)]="habitacionModel.disponible" disabled>
+                </div>
+            </form>
+        </div>
+        <div class="col-6">
+            <div class="row">
+                <h1 style="text-align:center">Servicios</h1>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Televisor</th>
+                            <th scope="col">Doble Cama</th>
+                            <th scope="col">Internet</th>
+                            <th scope="col">Tina</th>
+                            <th scope="col">Desayuno</th>
+                            <th scope="col">Mini Bar</th>
+                            <th scope="col">...</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">{{habitacionModelS.idServicio.televisor}}</th>
+                            <td>{{habitacionModelS.idServicio.dobleCama}}</td>
+                            <td>{{habitacionModelS.idServicio.internet}}</td>
+                            <td>{{habitacionModelS.idServicio.tina}}</td>
+                            <td>{{habitacionModelS.idServicio.desayuno}}</td>
+                            <td>{{habitacionModelS.idServicio.miniBar}}</td>
+                            <td><button type="button" class="btn btn-success">Seleccionar</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <hr/>
+            <div>
+                <button type="button" class="btn btn-success" routerLink="/reservacion">Reservar</button>
+            </div>
+        </div>
+    </div>
+</div>

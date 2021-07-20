@@ -1,0 +1,314 @@
+<br/>
+<div class="container-md">
+    <div class="row">
+        <div class="col-5">
+            <form>
+                <h2 style="text-align: center;">Hotel</h2>
+                <div class="mb-3">
+                    <label for="exampleInputNombre1" class="form-label" style="font-size: 160%;">Nombre</label>
+                    <input type="nombre" class="form-control" id="exampleInputNombre1" disabled>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputDescripcion" class="form-label" style="font-size: 160%;">Descripcion</label>
+                    <textarea class="form-control" id="exampleInputDescripcion" rows="3" disabled></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputTelefono" class="form-label" style="font-size: 160%;">Telefono</label>
+                    <input type="telefono" class="form-control" id="exampleInputTelefono" disabled>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputDireccion" class="form-label" style="font-size: 160%;">Direccion</label>
+                    <input type="direccion" class="form-control" id="exampleInputDireccion" disabled>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputAdminHotel" class="form-label" style="font-size: 160%;">Admin Hotel</label>
+                    <input type="adminHotel" class="form-control" id="exampleInputAdminHotel" disabled>
+                </div>
+                <br/>
+
+            </form>
+            <div class="d-grid gap-2">
+                <button class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#modalRegistrarHotel">Registrar</button>
+                <button class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#modalEditarHotel">Editar</button>
+                <button class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#modalEliminarHotel">Eliminar</button>
+            </div>
+
+
+
+        </div>
+        <div class="col-2">
+            <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">Ingresar Evento</button>
+        </div>
+
+
+
+        <div class="col-5">
+            <form>
+                <h2 style="text-align: center;">Habitacion</h2>
+                <div class="mb-3">
+                    <label for="exampleInputNumeroHabitacion" class="form-label">Numero Habitacion</label>
+                    <input type="numeroHabitacion" class="form-control" id="exampleNumeroHabitacion" disabled>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputClase" class="form-label">Clase</label>
+                    <input type="clase" class="form-control" id="exampleInputClase" disabled>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputTamaño" class="form-label">Tamaño</label>
+                    <input type="tamaño" class="form-control" id="exampleInputTamaño" disabled>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPrecio" class="form-label">Precio</label>
+                    <input type="precio" class="form-control" id="exampleInputPrecio" disabled>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputServicio" class="form-label">Servicio</label>
+                    <input type="servicio" class="form-control" id="exampleInputServicio" disabled>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputHotel" class="form-label">Hotel</label>
+                    <input type="hotel" class="form-control" id="exampleInputHotel" disabled>
+                </div>
+                <br/>
+            </form>
+            <div class="d-grid gap-2">
+                <button class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#modalRegistrarHabitacion">Registrar</button>
+                <button class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#modalEditarHabitacion">Editar</button>
+                <button class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#modalEliminarHabitacion">Eliminar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<!-- Modal Eventos-->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="exampleModalLabel">Registrar Eventos</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="exampleEvento" class="form-label">Evento</label>
+                        <input type="evento" class="form-control" id="exampleEvento">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleDescripcion" class="form-label">Descripcion</label>
+                        <textarea class="form-control" id="exampleDescripcion" rows="3"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleTipoEvento" class="form-label">Tipo Evento</label>
+                        <input type="tipoEvento" class="form-control" id="exampleTipoEvento">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary">Registrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Registrar Hotel -->
+<div class="modal fade" id="modalRegistrarHotel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Registrar Hotel</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="exampleNombre" class="form-label">Nombre</label>
+                        <input type="nombre" class="form-control" id="exampleNombre" name="nombre" #nombre="ngModel" [(ngModel)]="hotelModel.nombre">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleDescripcion" class="form-label">Descripcion</label>
+                        <textarea class="form-control" id="exampleDescripcion" rows="3" name="descipcion" #descipcion="ngModel" [(ngModel)]="hotelModel.descripcion"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleTelefono" class="form-label">Telefono</label>
+                        <input type="telefono" class="form-control" id="exampleTelefono" name="telefono" #telefono="ngModel" [(ngModel)]="hotelModel.telefono">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleDireccion" class="form-label">Direccion</label>
+                        <input type="direccion" class="form-control" id="exampleDireccion" name="direccion" #direccion="ngModel" [(ngModel)]="hotelModel.direccion">
+                    </div>
+                    <div class="mb-3">
+                        <label for="examploAdminHotel" class="form-label">Admin Hotel</label>
+                        <input type="adminHotel" class="form-control" id="exampleAdminHotel" name="idAdminHotel" #idAdminHotel="ngModel" [(ngModel)]="hotelModel.idAdminHotel">
+                    </div>
+                </form>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Calcelar</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="registrarHotel()">Registrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Editar Hotel -->
+<div class="modal fade" id="modalEditarHotel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Editar Hotel</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="exampleNombre" class="form-label">Nombre</label>
+                        <input type="nombre" class="form-control" id="exampleNombre">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleDescripcion" class="form-label">Descripcion</label>
+                        <textarea class="form-control" id="exampleDescripcion" rows="3"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleTelefono" class="form-label">Telefono</label>
+                        <input type="telefono" class="form-control" id="exampleTelefono">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleDireccion" class="form-label">Direccion</label>
+                        <input type="direccion" class="form-control" id="exampleDireccion">
+                    </div>
+                </form>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Calcelar</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="editarHotel()">Editar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Eliminar Hotel -->
+<div class="modal fade" id="modalEliminarHotel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Eliminar Usuario</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h3>Esta seguro que desea eliminar este Hotel !!?</h3>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Calcelar</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Eliminar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- Modal Registrar Habitacion-->
+<div class="modal fade" id="modalRegistrarHabitacion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Registrar Habitacion</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="exampleNumeroHabitacion" class="form-label">Numero Habitacion</label>
+                        <input type="numeroHabitacion" class="form-control" id="exampleNumeroHabitacion">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleClase" class="form-label">Clase</label>
+                        <input type="clase" class="form-control" id="exampleClase">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleTamaño" class="form-label">Tamaño</label>
+                        <input type="tamaño" class="form-control" id="exampleTamaño">
+                    </div>
+                    <div class="mb-3">
+                        <label for="examplePrecio" class="form-label">Precio</label>
+                        <input type="precio" class="form-control" id="examplePrecio">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputServicio" class="form-label">Servicio</label>
+                        <input type="servicio" class="form-control" id="exampleInputServicio">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputHotel" class="form-label">Hotel</label>
+                        <input type="hotel" class="form-control" id="exampleInputHotel">
+                    </div>
+                </form>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Calcelar</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Registrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Editar Habitacion-->
+<div class="modal fade" id="modalEditarHabitacion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Editar Habitacion</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="exampleNumeroHabitacion" class="form-label">Numero Habitacion</label>
+                        <input type="numeroHabitacion" class="form-control" id="exampleNumeroHabitacion">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleClase" class="form-label">Clase</label>
+                        <input type="clase" class="form-control" id="exampleClase">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleTamaño" class="form-label">Tamaño</label>
+                        <input type="tamaño" class="form-control" id="exampleTamaño">
+                    </div>
+                    <div class="mb-3">
+                        <label for="examplePrecio" class="form-label">Precio</label>
+                        <input type="precio" class="form-control" id="examplePrecio">
+                    </div>
+                </form>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Calcelar</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Editar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Eliminar Habitacion -->
+<div class="modal fade" id="modalEliminarHabitacion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Eliminar Habitacion</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h3>Esta seguro que desea eliminar esta habitacion !!?</h3>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Calcelar</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Eliminar</button>
+            </div>
+        </div>
+    </div>
+</div>

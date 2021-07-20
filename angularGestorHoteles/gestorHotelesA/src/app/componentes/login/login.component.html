@@ -1,0 +1,33 @@
+<br/>
+<h1 style="text-align: center;">Login</h1>
+<div class="container-sm">
+    <div class="row justify-content-md-center">
+        <div class="col col-lg-4">
+            <br/>
+            <form>
+                <div class="mb-3">
+                    <label for="exampleInputUsuario1" class="form-label" style="font-size: 160%;">Usuario</label>
+                    <input type="usuario" class="form-control" id="exampleInputUsuario1" name="usuario" #usuario="ngModel" [(ngModel)]="usuarioModel.usuario" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label" style="font-size: 160%;">Contraseña</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" name="password" #password="ngModel" [(ngModel)]="usuarioModel.password">
+                </div>
+                <br/>
+                <button type="submit" class="btn btn-danger" style="font-size: 120%;" (click)="login()">Ingresar</button>
+            </form>
+        </div>
+    </div>
+</div><br/>
+<br/>
+<div class="container-sm">
+    <div class="row justify-content-md-center">
+        <div class="col col-lg-4">
+            <div class="d-grid gap-2">
+                <button class="btn btn-primary" type="button" routerLink="/registro">Registrar Usuario</button>
+                <button class="btn btn-primary" type="button" routerLink="/registroAdminHotel">Registrar Admin Hotel</button>
+            </div>
+        </div>
+
+    </div>
+</div>

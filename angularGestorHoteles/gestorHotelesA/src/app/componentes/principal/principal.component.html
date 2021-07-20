@@ -1,0 +1,30 @@
+<nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+        <a>.</a>
+        <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Nombre Hotel" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Buscar</button>
+        </form>
+    </div>
+</nav>
+<div>
+    <h1 style="text-align: center;">Hoteles</h1>
+</div>
+<div class=container-md>
+    <div class="row">
+        <div class="col-xs-12 col-sm-4" *ngFor="let hot of hotelModelGet; let i = index">
+
+            <div class="card mb-3" style="max-width: 21rem;">
+                <img src="/assets/hotel1.jpg" class="card-img-top" alt="Hotel">
+                <div class="card-body">
+                    <h5 class="card-title">{{ hot.nombre }}</h5>
+                    <p class="card-text">{{ hot.descripcion }}</p>
+                    <p class="card-text">{{ hot.telefono }}</p>
+                    <p class="card-text">{{ hot.direccion }}</p>
+                    <button type="submit" class="btn btn-danger" style="font-size: 100%;" [routerLink]="['/hotel', hot._id]">Ver Habitaciones</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

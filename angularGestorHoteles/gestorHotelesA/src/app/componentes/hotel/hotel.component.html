@@ -1,0 +1,78 @@
+<br/>
+<div class="container-sm">
+    <div class="row">
+        <div class="col-6">
+            <h1 style="text-align:center"> Datos del Hotel</h1>
+            <form class="container-md">
+                <div class="mb-3">
+                    <label for="exampleInputNombre1" class="form-label" style="font-size: 160%;">Nombre</label>
+                    <input type="nombre" class="form-control" id="exampleInputNombre1" name="nombre" #nombre="ngModel" [(ngModel)]="hotelModel.nombre" disabled>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputDescripcion1" class="form-label" style="font-size: 160%;">Descripcion</label>
+                    <textarea class="form-control" id="exampleInputDescripcion1" rows="3" name="descripcion" #descripcion="ngModel" [(ngModel)]="hotelModel.descripcion" disabled></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputTelefono1" class="form-label" style="font-size: 160%;">Telefono</label>
+                    <input type="telefono" class="form-control" id="exampleInputTelefono1" name="telefono" #telefono="ngModel" [(ngModel)]="hotelModel.telefono" disabled>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputDireccion1" class="form-label" style="font-size: 160%;">Direccion</label>
+                    <input type="direccion" class="form-control" id="exampleInputDireccion1" name="direccion" #direccion="ngModel" [(ngModel)]="hotelModel.direccion" disabled>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputAdminHotel1" class="form-label" style="font-size: 160%;">Admin Hotel</label>
+                    <input type="adminHotel" class="form-control" id="exampleInputAdminHotel1" name="adminHotel" #adminHotel="ngModel" [(ngModel)]="hotelModel.idAdminHotel.nombre" disabled>
+                </div>
+            </form>
+        </div>
+        <div class="col-6">
+            <div class="row">
+                <button class="btn btn-primary" type="button" style="text-align: center;">Habitaciones del Hotel</button>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">N.Habitacion</th>
+                            <th scope="col">Clase</th>
+                            <th scope="col">Precio</th>
+                            <th scope="col">Disponible</th>
+                            <th scope="col">...</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let habitacion of hotelModelH; let i=index">
+                            <th scope="row">{{habitacion.numeroHabitacion}}</th>
+                            <td>{{habitacion.clase}}</td>
+                            <td>{{habitacion.precio}}</td>
+                            <td>{{habitacion.disponible}}</td>
+                            <td><button type="button" class="btn btn-success" [routerLink]="['/habitacion', habitacion._id]">Ver</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <hr/>
+            <div class="row">
+                <button class="btn btn-primary" type="button" style="text-align: center;">Eventos de Hotel</button>
+                <div class="card" style="width: 100%;">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">id Eventos</th>
+                                <th scope="col">evento</th>
+                                <th scope="col">descripcion</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let habitacion of hotelModelE.eventos; let i=index">
+                                <th scope="row">{{habitacion.idEvento._id}}</th>
+                                <td>{{habitacion.idEvento.evento}}</td>
+                                <td>{{habitacion.idEvento.descripcion}}</td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

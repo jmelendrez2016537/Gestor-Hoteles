@@ -1,0 +1,32 @@
+<br/>
+<h1 style="text-align: center;">Registrate</h1>
+
+<div class="container-sm">
+    <div class="row justify-content-md-center">
+        <div class="col col-lg-4">
+            <br/>
+            <br/>
+            <br/>
+            <form>
+                <div class="mb-3">
+                    <label for="exampleInputNombre1" class="form-label" style="font-size: 160%;">Nombre</label>
+                    <input type="nombre" class="form-control" id="exampleInputNombre1" name="nombre" #nombre="ngModel" [(ngModel)]="user.nombre" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label" style="font-size: 160%;">Correo</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" name="email" #email="ngModel" [(ngModel)]="user.email" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputUsuario1" class="form-label" style="font-size: 160%;">Usuario</label>
+                    <input type="usuario" class="form-control" id="exampleInputUsuario1" name="usuario" #usuario="ngModel" [(ngModel)]="user.usuario" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label" style="font-size: 160%;">Contraseña</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" name="password" #password="ngModel" [(ngModel)]="user.password">
+                </div>
+                <br/>
+                <button type="submit" class="btn btn-danger" style="font-size: 120%;" (click)="registrar()">Registrar</button>
+            </form>
+        </div>
+    </div>
+</div>

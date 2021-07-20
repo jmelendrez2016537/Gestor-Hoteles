@@ -1,0 +1,29 @@
+<br/>
+<div class="container-sm">
+    <div class="row">
+        <div class="col">
+            <div class="list-group">
+                <li class="list-group-item" style="background-color: deepskyblue;">Funciones</li>
+                <button type="button" class="list-group-item list-group-item-action" routerLink="/usuarios">Usuarios Registrados</button>
+                <button type="button" class="list-group-item list-group-item-action" routerLink="/grafica">Hotel mas solicitado</button>
+                <button type="button" class="list-group-item list-group-item-action" routerLink="/registroHotel">Registrar un nuevo Hotel</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card container" style="width: 100%;">
+                <img src="/assets/perfil4.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{adminModel.nombre}}</h5>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <label class="form-label"><b>Email:</b></label>
+                    <li class="list-group-item">{{adminModel.email}}</li>
+                    <label class="form-label"><b>Usuario:</b></label>
+                    <li class="list-group-item">{{adminModel.usuario}}</li>
+                    <label class="form-label"><b>ROL:</b></label>
+                    <li class="list-group-item">{{adminModel.rol}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
